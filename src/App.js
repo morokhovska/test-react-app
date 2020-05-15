@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import CountryInfo from "./pages/CountryInfo";
 import { getCountriesInfo } from "./services/countries";
 import './App.css';
+import './styles/pages.css';
 
 function App() {
   const [countryInfo, setCountryInfo] = useState({ data: null, loading: false, error: false });

@@ -17,12 +17,14 @@ const StartPage = ({ submit, error, resetError, data }) => {
     )
   }
   return (
-    <div>
-      <input type="text" onChange={onChangeHandler} placeholder="Enter country" />
-      <button disabled={!value} onClick={onSubmit}>Submit</button>
-      {
-        error && <div><p>Sorry, this country not exist</p></div>
-      }
+    <div className="home-page">
+      <div className="wrapper">
+        <input className="country-input" type="text" onChange={onChangeHandler} placeholder="Enter country" />
+        <button disabled={!value} onClick={onSubmit}>Submit</button>
+        {
+          error && <div><p className="error-message">Sorry, this country not exist</p></div>
+        }
+      </div>
     </div>
   )
 }
