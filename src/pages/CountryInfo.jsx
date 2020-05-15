@@ -42,29 +42,28 @@ const CountryPage = ({ data }) => {
         }
       </div>
       <div className="weather-info">
-        <div className="weather-card">
-          {
-            weather && <>
-              <h1>{currentCapital}</h1>
-              <div className="items">Temperature:
+        {
+          weather && <div className="weather-card">
+            <h1>{currentCapital}</h1>
+            <div className="items">Temperature:
               {
-                  " " + weather.temperature
-                }
-              </div>
-              <img src={weather.weather_icons} alt="weather" width="100px" height="100px" />
-              <div className="items">Wind speed:
+                " " + weather.temperature
+              }
+            </div>
+            <img src={weather.weather_icons} alt="weather" width="100px" height="100px" />
+            <div className="items">Wind speed:
               {
-                  " " + weather.wind_speed
-                }
-              </div>
-              <div className="items">Precip:
+                " " + weather.wind_speed
+              }
+            </div>
+            <div className="items">Precip:
               {
-                  " " + weather.precip
-                }
-              </div>
-            </>
-          }
-        </div>
+                " " + weather.precip
+              }
+            </div>
+          </div>
+        }
+
       </div>
     </div>
   )
